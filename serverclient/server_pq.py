@@ -1,3 +1,14 @@
+
+#=====================================================================================
+#
+# Filename:  server_pq.py
+#
+# Description: This code builds a twisted-based server for asynchronous managing requests.
+#              A simple resource allocation algorithm is implemented.  
+#              The implemented buffer is used to store frequent received requests which do
+#              not need to be searched in the database. 
+#
+#=====================================================================================
 import time
 #from twisted.internet import pollreactor
 #pollreactor.install()
@@ -98,6 +109,7 @@ class BufferStruct(object):
         self.bufferdata = ""
 
 from topicdb import *
+
 #protocal definition
 class Echopq(NetstringReceiver):
 #class Echopq(Protocol):
