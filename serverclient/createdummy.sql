@@ -1,3 +1,5 @@
+-- create a PostgreSQL table with index of 5 types of data
+--
 -- cleanup old table
 DROP TABLE topictable CASCADE;
 

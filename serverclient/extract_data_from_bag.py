@@ -1,5 +1,11 @@
+# =========================================================
+#   File name: extract_data_from_bag.py
+#  Description: This code is used to extract a rosbag into 
+#               table of PostgreSQL
+#
+# =========================================================
 #!/usr/bin/python
-#test: extract_data_from_bag.py 2011-10-11-16-57-33.bag
+#test: extract_data_from_bag.py 2012-03-24-21-56-50.bag 
 
 import roslib; roslib.load_manifest('rosbag')
 import rosbag
