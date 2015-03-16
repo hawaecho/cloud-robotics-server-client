@@ -1,3 +1,13 @@
+
+#=====================================================================================
+#
+# Filename:  client_function_demo.py
+#
+# Description: This code builds a twisted-based client for requesting data.
+#              The data is requested in two index: one is ID and the other is timestamp,
+#              according to the table structure of database PostgreSQL.
+#
+#=====================================================================================
 #from twisted.internet import pollreactor
 #pollreactor.install()
 #
@@ -123,8 +133,10 @@ def callback_pq(p, request, t):
     reactor.callLater(t, p.mySendData, request)
     return 
 
-#hostname = "localhost"
-hostname = "192.168.56.1"
+# If the client is with the same IP of the server, then 
+hostname = "localhost"
+# If the client and server are not with the same IP, then 
+#hostname = "192.168.56.1"
 port = 8007
 import sys
 
@@ -246,7 +258,7 @@ def shutdownreactor(endpoint, myfactory, access):
 
     reactor.stop()
 
-
+# main function 
 print "Create connection to ", hostname, port
 endpoint = TCP4ClientEndpoint(reactor, hostname, port) 
 
